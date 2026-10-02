@@ -1,0 +1,480 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #07111f;
+    color: white;
+}
+
+
+/* HEADER */
+
+.header {
+    position: sticky;
+    top: 0;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 18px 8%;
+
+    background: rgba(7, 17, 31, 0.95);
+
+    z-index: 100;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav a {
+    color: #cbd5e1;
+    text-decoration: none;
+    margin-left: 25px;
+}
+
+nav a:hover {
+    color: #7dd3fc;
+}
+
+
+/* HERO */
+
+.hero {
+    min-height: 80vh;
+
+    display: flex;
+    align-items: center;
+
+    padding: 80px 10%;
+
+    background:
+        radial-gradient(
+            circle at 70% 30%,
+            #123d63,
+            transparent 40%
+        ),
+        #07111f;
+}
+
+.tag {
+    color: #38bdf8;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    font-size: clamp(45px, 7vw, 80px);
+
+    line-height: 1;
+
+    margin-bottom: 25px;
+}
+
+.hero h1 span {
+    color: #38bdf8;
+}
+
+.hero-text {
+    max-width: 600px;
+
+    color: #a8b4c5;
+
+    font-size: 18px;
+
+    line-height: 1.7;
+
+    margin-bottom: 30px;
+}
+
+.hero-button {
+    display: inline-block;
+
+    padding: 15px 25px;
+
+    background: #38bdf8;
+
+    color: #06111f;
+
+    text-decoration: none;
+
+    border-radius: 10px;
+
+    font-weight: bold;
+}
+
+
+/* SECTIONS */
+
+.section {
+    padding: 90px 8%;
+}
+
+.section-title {
+    max-width: 700px;
+
+    margin-bottom: 40px;
+}
+
+.section-title h2 {
+    font-size: 40px;
+
+    margin-bottom: 12px;
+}
+
+.section-title p:not(.tag) {
+    color: #94a3b8;
+
+    line-height: 1.6;
+}
+
+
+/* PLANNER */
+
+.planner-card {
+    max-width: 700px;
+
+    background: #0d1b2e;
+
+    border: 1px solid #1e3a56;
+
+    padding: 30px;
+
+    border-radius: 18px;
+
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+}
+
+.planner-card label {
+    display: block;
+
+    margin-top: 18px;
+
+    margin-bottom: 8px;
+
+    color: #cbd5e1;
+}
+
+input,
+select {
+    width: 100%;
+
+    padding: 14px;
+
+    border-radius: 10px;
+
+    border: 1px solid #29445f;
+
+    background: #081525;
+
+    color: white;
+
+    font-size: 16px;
+}
+
+.main-button {
+    margin-top: 25px;
+
+    padding: 14px 22px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background: #38bdf8;
+
+    color: #06111f;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+.main-button:hover {
+    transform: translateY(-2px);
+}
+
+
+/* ROUTINE */
+
+.routine-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(230px, 1fr));
+
+    gap: 20px;
+}
+
+.routine-card {
+    background: #0d1b2e;
+
+    border: 1px solid #1e3a56;
+
+    padding: 25px;
+
+    border-radius: 16px;
+}
+
+.routine-number {
+    font-size: 30px;
+
+    margin-bottom: 15px;
+}
+
+.routine-card h3 {
+    margin-bottom: 10px;
+}
+
+.routine-card p {
+    color: #94a3b8;
+
+    line-height: 1.6;
+}
+
+
+/* RESOURCES */
+
+.resource-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(220px, 1fr));
+
+    gap: 20px;
+}
+
+.resource-card {
+    background: #0d1b2e;
+
+    border: 1px solid #1e3a56;
+
+    padding: 25px;
+
+    border-radius: 16px;
+
+    transition: 0.2s;
+}
+
+.resource-card:hover {
+    transform: translateY(-5px);
+
+    border-color: #38bdf8;
+}
+
+.resource-icon {
+    font-size: 35px;
+
+    margin-bottom: 15px;
+}
+
+.resource-card h3 {
+    margin-bottom: 10px;
+}
+
+.resource-card p {
+    color: #94a3b8;
+
+    line-height: 1.5;
+
+    margin-bottom: 20px;
+}
+
+.resource-card a {
+    color: #38bdf8;
+
+    text-decoration: none;
+
+    font-weight: bold;
+}
+
+
+/* PROGRESS */
+
+.progress-card {
+    max-width: 700px;
+
+    background: #0d1b2e;
+
+    padding: 30px;
+
+    border-radius: 18px;
+
+    border: 1px solid #1e3a56;
+}
+
+.progress-info {
+    display: flex;
+
+    justify-content: space-between;
+
+    margin-bottom: 15px;
+}
+
+.progress-bar {
+    width: 100%;
+
+    height: 15px;
+
+    background: #1e293b;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+}
+
+.progress-fill {
+    width: 0%;
+
+    height: 100%;
+
+    background: #38bdf8;
+
+    transition: 0.4s;
+}
+
+
+/* FOOTER */
+
+footer {
+    padding: 30px 8%;
+
+    border-top: 1px solid #1e3a56;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    color: #64748b;
+}
+
+
+/* HIDDEN */
+
+.hidden {
+    display: none;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+    nav {
+        display: none;
+    }
+
+    .hero {
+        min-height: 70vh;
+
+        padding: 60px 7%;
+    }
+
+    .section {
+        padding: 60px 7%;
+    }
+
+    .section-title h2 {
+        font-size: 32px;
+    }
+
+    footer {
+        flex-direction: column;
+
+        gap: 10px;
+    }
+}
+/* =========================
+   STUDYSPHERE AI
+========================= */
+
+.ai-section {
+    max-width: 900px;
+    margin: 60px auto;
+    padding: 30px;
+    background: #111827;
+    border: 1px solid #1e3a8a;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.ai-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.ai-header span {
+    font-size: 40px;
+}
+
+.ai-header h2 {
+    margin: 0;
+    color: #60a5fa;
+    font-size: 28px;
+}
+
+.ai-header p {
+    margin: 5px 0 0;
+    color: #9ca3af;
+}
+
+#aiQuestion {
+    width: 100%;
+    min-height: 120px;
+    padding: 15px;
+    box-sizing: border-box;
+    background: #0f172a;
+    color: white;
+    border: 1px solid #334155;
+    border-radius: 12px;
+    resize: vertical;
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+#aiQuestion:focus {
+    outline: none;
+    border-color: #3b82f6;
+}
+
+.ai-section button {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 10px;
+    background: #2563eb;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.ai-section button:hover {
+    background: #1d4ed8;
+}
+
+#aiResponse {
+    margin-top: 20px;
+    padding: 20px;
+    background: #0f172a;
+    border-radius: 12px;
+    color: #dbeafe;
+    min-height: 50px;
+}
